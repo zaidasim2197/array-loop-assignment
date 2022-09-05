@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ES6 Functions</h1>
+    <form onsubmit="submitfunction(); return false" >
+    
+    Total Marks: <input typ="number" name="total" id=""><br>
+    Obtain Marks: <input type="number" name="obtain" id=""><br>
+    <button > Calculate </button>
+    <h2 id="res"></h2>
+    </form>
+    <script>
+        
+function doSum(num1,num2){
+
+    let per = (num2 *100)/num1;
+    per = per.toFixed(0);
+    per = Number(per);
+    return per;
+      
+function submitfunction(){
+    let total = +document.querySelector("#total").value
+    let obtain = +document.querySelector("#obtain").value
+
+let res= doSum(total,obtain);
+
+if(res){
+    document.querySelector("#res").innerHTML = res
+}
+else{
+    
+    document.querySelector("#res").innerHTML = 'invalid'
+}
+}}
+    </script>
+</body>
+</html>
